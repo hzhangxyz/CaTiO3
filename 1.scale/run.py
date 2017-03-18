@@ -9,7 +9,7 @@ def run(size):
     return float(co("cd try_%f;grep TOTEN OUTCAR | tail -n 1"%size,shell=True).split()[-2])
 
 def find(a,A,b,B):
-    if b-a < 0.01:
+    if b-a < 0.00001:
         return
     print a,b,A,B
     m = (2.*a + b)/3
