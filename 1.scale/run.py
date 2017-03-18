@@ -2,11 +2,11 @@ import os
 from subprocess import check_output as co
 
 def run(size):
-    os.system("mkdir %f 1>/dev/null 2>&1"%size)
-    os.system("cp POTCAR KPOINTS INCAR %f/"%size)
-    os.system("cat POSCAR | sed s/size/%(s)f/g > %(s)f/POSCAR"%{"s":size})
-    os.system("cd %f;mpirun -n 22 vasp"%size)
-    return float(co("cd %f;grep TOTEN OUTCAR | tail -n 1"%size,shell=True).split()[-2])
+    os.system("mkdir try_%f 1>/dev/null 2>&1"%size)
+    os.system("cp POTCAR KPOINTS INCAR try_%f/"%size)
+    os.system("cat POSCAR | sed s/size/%(s)f/g > try_%(s)f/POSCAR"%{"s":size})
+    os.system("cd try_%f;mpirun -n 22 vasp 1>/dev/null 2>&1"%size)
+    return float(co("cd try_%f;grep TOTEN OUTCAR | tail -n 1"%size,shell=True).split()[-2])
 
 def find(a,A,b,B):
     if b-a < 0.01:
