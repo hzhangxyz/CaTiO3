@@ -16,7 +16,7 @@ def readfile(name):
     return data
 
 def main():
-    for i in "Ca Ti Ca-O Ti-O".split():
+    for i in map(lambda x:x+"/CONTCAR","Ca Ti Ca-O Ti-O".split()):
         print i,polarization(readfile(i))
 
 if __name__=="__main__":
