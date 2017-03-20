@@ -10,7 +10,7 @@ s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.bind(('0.0.0.0', port))
 s.listen(1024)
 
-i = 0
+i = 20000
 while True:
     sock, addr = s.accept()
     t = sock.recv(1024)

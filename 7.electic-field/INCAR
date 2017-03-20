@@ -1,0 +1,8 @@
+EFIELD_PEAD = 0.0 0.0 10.0
+IBRION      = 2
+NSW         = 1024
+LCALPOL     = .TRUE.
+LCALCEPS    = .TRUE.
+LRPA        = .FALSE.
+LSKIP_NSCF  = .TRUE.
+LSKIP_SCF   = .TRUE.
