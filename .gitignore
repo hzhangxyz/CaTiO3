@@ -10,3 +10,4 @@ test/
 *vasprun.xml
 *WAVECAR
 *XDATCAR
+.ipynb_checkpoints/
