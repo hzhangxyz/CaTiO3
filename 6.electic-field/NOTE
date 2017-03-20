@@ -1,0 +1,5 @@
+http://cms.mpi.univie.ac.at/vasp-forum/viewtopic.php?f=4&t=17390
+
+The implementation of EFIELD_PEAD in VASP evaluates the influence of the external electric field
+on the electronic structure only. The contribution to forces acting on atoms is not impelemented.
+Therefore, the study of the influence of the external field on geometries is not possible.
